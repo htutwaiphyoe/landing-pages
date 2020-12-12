@@ -23,21 +23,23 @@ const replaceTemplate = (template, data) => {
 };
 // create server
 const server = http.createServer((req, res) => {
-    console.log(req.url);
-    if (req.url === "/") {
+    const { pathname, query } = url.parse(req.url);
+    const params = new URLSearchParams(query);
+    if (pathname === "/") {
         const cards = dataObj.map((el) => replaceTemplate(cardTemplate, el)).join("");
         const overview = overviewTemplate.replace(/{%PRODUCT_CARDS%}/g, cards);
         res.writeHead(200, {
             "Content-Type": "text/html",
         });
         res.end(overview);
-    } else if (req.url === "/products") {
+    } else if (pathname === "/products") {
+        const productData = dataObj[params.get("id")];
+        const product = replaceTemplate(productTemplate, productData);
         res.writeHead(200, {
             "Content-Type": "text/html",
-            "my-headers": "ok",
         });
-        res.end("<h1>Products</h1>");
-    } else if (req.url === "/api") {
+        res.end(product);
+    } else if (pathname === "/api") {
         res.writeHead(200, {
             "Content-Type": "application/json",
         });
