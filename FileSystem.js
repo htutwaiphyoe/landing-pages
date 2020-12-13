@@ -12,16 +12,22 @@ const appendText = `\nCreated at: ${new Date().toLocaleDateString()}`;
 fs.appendFileSync("./txt/output.txt", appendText);
 console.log("File appending finished");
 
-fs.readFile("./txt/start.txt", "utf-8", (err, data1) => {
+fs.readFile(`./txt/start.txt`, "utf-8", (err, data1) => {
     if (err) return console.log("Something went wrong!");
     fs.readFile(`./txt/${data1}.txt`, "utf-8", (err, data2) => {
+        if (err) return console.log("Something went wrong!");
         fs.writeFile(`./txt/final.txt`, data2, "utf-8", (err) => {
+            if (err) return console.log("Something went wrong!");
+            console.log("File has been written");
             fs.readFile(`./txt/append.txt`, "utf-8", (err, data3) => {
+                if (err) return console.log("Something went wrong!");
                 fs.appendFile(`./txt/final.txt`, `\n${data3}`, "utf-8", (err) => {
+                    if (err) return console.log("Something went wrong!");
+                    console.log("File has been appended");
                     console.log("File processing finished");
                 });
             });
         });
     });
 });
-console.log("File processing start");
+console.log("File processing...");

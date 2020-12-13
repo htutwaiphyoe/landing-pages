@@ -1,6 +1,7 @@
 const http = require("http");
 const url = require("url");
 const fs = require("fs");
+const slugify = require("slugify");
 const { replaceTemplate } = require("./modules/utils");
 
 // Top level code
@@ -9,7 +10,7 @@ const overviewTemplate = fs.readFileSync(`${__dirname}/templates/overviewTemplat
 const cardTemplate = fs.readFileSync(`${__dirname}/templates/cardTemplate.html`, "utf-8");
 const productTemplate = fs.readFileSync(`${__dirname}/templates/productTemplate.html`, "utf-8");
 const dataObj = JSON.parse(data);
-
+const slugs = dataObj.map((el) => slugify(el.productName, { lower: true }));
 // create server
 const server = http.createServer((req, res) => {
     const { pathname, query } = url.parse(req.url);
