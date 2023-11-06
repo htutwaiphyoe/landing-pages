@@ -1,0 +1,16 @@
+{
+  "name": "trillo-flexbox",
+  "version": "1.0.0",
+  "description": "Trillo flexbox project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Htut Wai Phyoe",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
