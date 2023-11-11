@@ -1,0 +1,75 @@
+.header{
+    background-color: $color-grey-dark-1;
+    grid-column: full-start / col-end 6;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba($color-secondary,.9)),to(rgba($color-secondary,.9))),url(../img/hero.jpeg);
+    background-image: linear-gradient(rgba($color-secondary,.9),rgba($color-secondary,.9)),url(../img/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-rows: 1fr -webkit-min-content minmax(-webkit-min-content,6rem) 1fr;
+    grid-template-rows: 1fr min-content minmax(min-content,6rem) 1fr;
+    grid-template-columns: minmax(-webkit-min-content, -webkit-max-content);
+    grid-template-columns: minmax(min-content, max-content);
+    grid-row-gap: 1.5rem;
+    padding: 8rem;
+    padding-top: 4rem;
+    -webkit-box-pack: center;
+            justify-content: center;
+    @media only screen and (max-width: $res-md-port){
+        grid-column: full-start / full-end;
+      
+    }
+    @media only screen and (max-width: $res-sm-land){
+        padding: 6rem;
+    }
+
+
+    &__logo{
+        height: 3rem;
+        justify-self: center;
+    }
+
+
+    &__seenon-text{
+        color: $color-grey-light-2;
+        display: grid;
+        font-size: 1.6rem;
+        grid-template-columns: 1fr -webkit-max-content 1fr;
+        grid-template-columns: 1fr max-content 1fr;
+        -webkit-box-align: center;
+                align-items: center;
+        grid-column-gap: 1.5rem;
+        &::before,
+        &::after{
+            content: '';
+            display: block;
+            height: .13rem;
+            
+            background-color: currentColor;
+           
+}
+
+    }
+
+
+    &__seenon-logos{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        -webkit-box-align: center;
+                align-items: center;
+        grid-column-gap: 3rem;
+        img{
+            max-height: 2.5rem;
+            max-width: 100%;
+            filter: brightness(70%);
+            -webkit-filter: brightness(70%);
+}
+    }
+
+    &__btn{
+        justify-self: start;
+        align-self: start;
+    }
+}
