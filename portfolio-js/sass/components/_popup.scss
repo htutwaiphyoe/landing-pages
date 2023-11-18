@@ -1,0 +1,58 @@
+.popup{
+    background: inherit;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    &__show
+    {
+        display: flex;
+     
+      
+    }
+
+    &__close{
+        position: absolute;
+        top: 8%;
+        right: 5%;
+      
+        svg
+        {
+            width: 4rem;
+            height: 4rem;
+            fill: currentColor;
+            cursor: pointer;
+            transition: transform .2s;
+            -webkit-transition: transform .2s;
+            -moz-transition: transform .2s;
+            -ms-transition: transform .2s;
+            -o-transition: transform .2s;
+}
+        &:hover svg{
+            transform: scale(.85);
+            -webkit-transform: scale(.85);
+            -moz-transform: scale(.85);
+            -ms-transform: scale(.85);
+            -o-transform: scale(.85);
+}
+    }
+
+    &__box{
+        width: 50%;
+
+        height: auto;
+        overflow: hidden;
+       
+    }
+    &__image{
+        width: 100%;
+        object-fit: cover;
+    }
+}

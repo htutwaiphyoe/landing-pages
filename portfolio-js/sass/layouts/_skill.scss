@@ -1,0 +1,100 @@
+.skill{
+    width: 90%;
+    margin: 0 auto;
+ 
+    &__heading{
+
+        &::after{
+            @include heading-width(10);
+            @include responsive(48){
+ 
+                @include heading-width(20);
+        
+            }
+            @include responsive(36){
+ 
+                @include heading-width(25);
+        
+            }
+        }
+    }
+
+    &__box{
+        padding: 5rem 0;
+        display: flex;
+        @include responsive(68.75){
+            flex-direction: column;
+            
+        }
+        justify-content: center;
+        align-items: center;
+        // display: grid;
+        // grid-template-columns: repeat(4,1fr);
+        // grid-column-gap: 2rem;
+        &--1{
+         
+            display: flex;
+            @include responsive(36){
+      
+                flex-direction: column;
+              }
+          
+        }
+        &--2{
+            
+            display: flex;
+            @include responsive(36){
+                flex-direction: column;
+              }
+
+        }
+        &-item{
+            padding: 2rem 3rem;
+            text-align: center;
+
+            &__circle{
+                position: relative;
+                  
+               
+
+
+                &--1{
+                    @extend %circle;
+                    @include stroke-percentage(78);
+                    
+                }  
+                &--2{
+                    @extend %circle;
+                    @include stroke-percentage(59);
+                }
+                &--3{
+                    @extend %circle;
+                    @include stroke-percentage(81);
+                }
+                &--4{
+                    @extend %circle;
+                    @include stroke-percentage(65);
+                } 
+            
+                .percentage{
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    span{
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                       
+                    }
+                }
+            }
+            
+        }
+    }
+}

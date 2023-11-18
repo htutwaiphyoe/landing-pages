@@ -1,0 +1,36 @@
+.preloader{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: fixed !important;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    opacity: 1;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    z-index: 10;
+    &__icon
+    {
+
+
+        svg{
+            width: 10rem;
+            height: 10rem;
+            transform-origin: 48% 48%;
+            animation: preloader 1.2s infinite linear;
+            -webkit-animation: preloader 1.2s infinite linear;
+            fill: currentColor;
+        
+        }
+        
+    }
+
+    & .preloader.preloader--finished{
+        pointer-events: none;
+        opacity: 0;
+    }
+}

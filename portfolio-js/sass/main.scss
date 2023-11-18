@@ -1,0 +1,25 @@
+
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/base';
+@import 'base/animation';
+@import 'base/utilites';
+@import 'base/typography';
+
+
+@import 'components/preloader';
+@import 'components/navigation';
+@import 'components/button';
+@import 'components/popup';
+
+
+@import 'layouts/header';
+@import 'layouts/profile';
+@import 'layouts/about';
+@import 'layouts/skill';
+@import 'layouts/statistics';
+@import 'layouts/gallary';
+@import 'layouts/hobbies';
+@import 'layouts/contact';
+@import 'layouts/footer';

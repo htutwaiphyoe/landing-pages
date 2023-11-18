@@ -1,0 +1,50 @@
+@mixin heading-width($width) {
+    width: $width * 1%;
+
+}
+@mixin stroke-percentage($percentage) {
+ 
+    circle:last-child{ 
+        stroke-dashoffset: calc(570 - 570 * #{$percentage} / 100);
+        stroke: currentColor;
+    }
+
+}
+@mixin slide {
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+@mixin responsive($breakpoint) {
+    @media only screen and (max-width: $breakpoint * 1em){
+        @content;
+    }
+}
+%circle {
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    circle
+    {
+    
+        stroke-width: 10;
+        fill: none;
+        stroke-dasharray: 570;
+        stroke-dashoffset: 570;
+        stroke-linecap: round;
+        transform: translate(.5rem,.5rem);
+        -webkit-transform: translate(.5rem,.5rem);
+        -moz-transform: translate(.5rem,.5rem);
+        -ms-transform: translate(.5rem,.5rem);
+        -o-transform: translate(.5rem,.5rem);
+
+        
+    }
+    circle:first-child{
+        stroke-dashoffset: 0;
+        stroke: var(--color-primary);
+    }
+    
+} 

@@ -1,0 +1,25 @@
+.header{
+    background-image: url('https://images.unsplash.com/photo-1530814394340-02d8010713d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80');
+    height: 82vh;
+ 
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    @include responsive(48){
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+      }
+      @include responsive(36){
+        clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+      }
+      @include responsive(30){
+ 
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    }
+    @include responsive(23.75){
+        
+        clip-path: polygon(0 0, 100% 0, 100% 93%, 50% 100%, 0 93%);
+      }
+    background-size: cover;
+    background-position: center;
+    @include slide();
+ 
+}

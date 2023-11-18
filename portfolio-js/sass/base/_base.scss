@@ -1,0 +1,157 @@
+:root {
+  --color-light: rgb(228, 230, 235);
+  --color-light-dark: rgb(241, 240, 240);
+  // --color-dark: #18191A;
+  --color-dark: #1c1e21;
+  --color-primary: rgb(151, 151, 151);
+  --color-secondary: rgb(78, 77, 77);
+
+  --color-white: #fff;
+  --color-black: #000;
+  --foreground: var(--color-dark);
+  --background: var(--color-light);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--foreground);
+  background-color: var(--background);
+}
+.darkmode {
+  color: var(--background);
+  background-color: var(--foreground);
+}
+.lightmode {
+  color: var(--foreground) !important;
+  background-color: var(--background) !important;
+}
+::-moz-selection {
+  color: var(--background);
+  background-color: var(--foreground);
+}
+::selection {
+  color: var(--background);
+  background-color: var(--foreground);
+}
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--background);
+}
+::-webkit-scrollbar-corner {
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--foreground);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.slide {
+  transform: translateX(-22%);
+  -webkit-transform: translateX(-22%);
+  -moz-transform: translateX(-22%);
+  -ms-transform: translateX(-22%);
+  -o-transform: translateX(-22%);
+  @include responsive(74) {
+    transform: translateX(-26%);
+    -webkit-transform: translateX(-26%);
+    -moz-transform: translateX(-26%);
+    -ms-transform: translateX(-26%);
+    -o-transform: translateX(-26%);
+  }
+  @include responsive(62) {
+    transform: translateX(-30%);
+    -webkit-transform: translateX(-30%);
+    -moz-transform: translateX(-30%);
+    -ms-transform: translateX(-30%);
+    -o-transform: translateX(-30%);
+  }
+  @include responsive(53.625) {
+    transform: translateX(-35%);
+    -webkit-transform: translateX(-35%);
+    -moz-transform: translateX(-35%);
+    -ms-transform: translateX(-35%);
+    -o-transform: translateX(-35%);
+  }
+  @include responsive(48) {
+    transform: translateX(-40%);
+    -webkit-transform: translateX(-40%);
+    -moz-transform: translateX(-40%);
+    -ms-transform: translateX(-40%);
+    -o-transform: translateX(-40%);
+  }
+  @include responsive(41) {
+    transform: translateX(-44%);
+    -webkit-transform: translateX(-44%);
+    -moz-transform: translateX(-44%);
+    -ms-transform: translateX(-44%);
+    -o-transform: translateX(-44%);
+  }
+  @include responsive(36) {
+    transform: translateX(-53%);
+    -webkit-transform: translateX(-53%);
+    -moz-transform: translateX(-53%);
+    -ms-transform: translateX(-53%);
+    -o-transform: translateX(-53%);
+  }
+  @include responsive(30) {
+    transform: translateX(-60%);
+    -webkit-transform: translateX(-60%);
+    -moz-transform: translateX(-60%);
+    -ms-transform: translateX(-60%);
+    -o-transform: translateX(-60%);
+  }
+  @include responsive(25) {
+    transform: translateX(-67%);
+    -webkit-transform: translateX(-67%);
+    -moz-transform: translateX(-67%);
+    -ms-transform: translateX(-67%);
+    -o-transform: translateX(-67%);
+  }
+  @include responsive(20) {
+    transform: translateX(-80%);
+    -webkit-transform: translateX(-80%);
+    -moz-transform: translateX(-80%);
+    -ms-transform: translateX(-80%);
+    -o-transform: translateX(-80%);
+  }
+}
+main {
+  @include slide();
+}
+.current-slide {
+  background-color: var(--foreground) !important;
+}
+.current-slide-toggle {
+  background-color: var(--background) !important;
+}
+::-webkit-input-placeholder {
+  color: var(--color-primary);
+}
+.popupshow {
+  overflow: hidden;
+  height: 100vh;
+}
+
+//68.75 62 60 56.875

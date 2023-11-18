@@ -1,0 +1,103 @@
+.photo{
+    position: relative;
+    width:  20%;
+    margin: 0 auto;
+    height: 0;
+    @include responsive(62){
+      
+        width: 23%;
+      }
+    @include responsive(60){
+      
+        width: 25%;
+      }
+      @include responsive(48){
+        width: 30%;
+      }
+      @include responsive(36){
+ 
+        width: 36%;
+
+    }
+    @include responsive(30){
+        width: 40%;
+      }
+      @include responsive(25){
+        width: 45%;
+      }
+    margin-bottom: 4.5%;
+    &__pro{
+        width: 100%;
+        border-radius: 55%;
+        -webkit-border-radius: 55%;
+        -moz-border-radius: 55%;
+        -ms-border-radius: 55%;
+        -o-border-radius: 55%;
+        transform: translateY(-60%);
+        -webkit-transform: translateY(-60%);
+        -moz-transform: translateY(-60%);
+        -ms-transform: translateY(-60%);
+        -o-transform: translateY(-60%);
+        border: 5px solid var(--color-primary);
+    }
+}
+
+.profile{
+    padding: 6rem;
+    text-align: center;
+    @include responsive(30){
+ 
+        padding: 6rem 3rem;
+    }
+    &__list{
+        padding: 2.5rem 2.5rem 0 2.5rem;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(5,minmax(min-content,2rem));
+        justify-content: center;
+        grid-column-gap: 1.5rem;
+    }
+    &__item{
+        width: 50%;
+    }
+    &__link{
+     
+        &:link,
+        &:visited{
+            color: inherit;
+            text-decoration: none;
+          
+        }
+        &:focus{
+            outline: none;
+        }
+        
+    }
+
+    &__icon{
+        width: 4rem;
+        height: 4rem;
+        fill: currentColor;
+        transition: all .2s;
+        -webkit-transition: all .2s;
+        -moz-transition: all .2s;
+        -ms-transition: all .2s;
+        -o-transition: all .2s;
+}
+    &__link:active &__icon
+    {
+        transform: scale(1.01);
+        -webkit-transform: scale(1.01);
+        -moz-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+        -o-transform: scale(1.01);
+    }
+    &__link:hover &__icon{
+        transform: scale(1.11);
+        -webkit-transform: scale(1.11);
+        -moz-transform: scale(1.11);
+        -ms-transform: scale(1.11);
+        -o-transform: scale(1.11);
+        opacity: 0.8;
+    }
+}
