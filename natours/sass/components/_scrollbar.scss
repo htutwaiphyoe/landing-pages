@@ -1,0 +1,17 @@
+/*-------------------------------------------------------------------------*/
+/* Scrollbar */
+/*-------------------------------------------------------------------------*/
+::-webkit-scrollbar{
+    width: 1rem;
+    &-track{
+        background-color: $color-white;
+      
+    }
+    &-corner{
+        border-radius: 1rem;
+    }
+    &-thumb{
+        background-color: $color-primary-medium;
+        border-radius: 10rem;
+    }
+}

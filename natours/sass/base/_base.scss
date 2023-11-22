@@ -1,0 +1,71 @@
+/*--------------------------------------------------
+                Universal selector 
+--------------------------------------------------*/
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+   
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+  
+    @include responsive(112.5){
+        font-size: 80%;
+    }
+    @include responsive(75){
+        font-size: 60%; //1200
+    }
+    @include responsive(64){
+        font-size: 55%; //1024
+    }
+    @include responsive(56.25){
+        font-size: 50%; //900
+    }
+    @include responsive(48){
+        font-size: 50%; //768
+    }
+    @include responsive(36){
+        font-size: 40%; //576
+    }
+    @include responsive(30){
+        font-size: 35%; //480
+    }
+    @include responsive(20){
+        font-size: 30%; //320
+    }
+    @include responsive(16.5){
+        font-size: 20%; //320
+    }
+  
+    // @include responsive(24){
+    //     font-size: 25%; //384
+    // }
+    // @include responsive(19.75){
+    //     font-size: 20%; //316
+    // }
+    // @include responsive(15){
+    //     font-size: 15%; //240
+    // }
+    
+}
+body{
+
+    padding: 3rem;
+    box-sizing: border-box;
+    @include responsive(48){
+        padding: 0;//768 
+    }
+}
+::-moz-selection{
+    background-color: $color-primary;
+    color : $color-white;
+}
+::selection{
+    background-color: $color-primary;
+    color : $color-white;
+}

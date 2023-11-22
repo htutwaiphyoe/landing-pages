@@ -1,0 +1,68 @@
+@mixin clearfix {
+    &::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+    
+}
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%,-50%);
+    -webkit-transform:  translate(-50%,-50%);
+    -moz-transform:  translate(-50%,-50%);
+    -ms-transform:  translate(-50%,-50%);
+    -o-transform:  translate(-50%,-50%);
+}
+
+//media query manager
+
+/* 
+0 - 600 : phone
+600 - 900 : tablet portrait
+900 - 1200 : tablet landscape
+1200 - 1800 : laptop
+1800+ : big desktop
+*/
+@mixin  responsive($breakpoint) {
+    @if $breakpoint >= 112.5{
+        @media only screen and (min-width : $breakpoint*1em){
+            @content;
+        }
+    }
+    @if $breakpoint < 112.5 {
+        @media only screen and (max-width: $breakpoint*1em){
+            @content;
+        }
+    }
+}
+// @mixin responsive-phone{
+//     @media only screen and (max-width : 600px){
+//         @content;
+//     }
+// }
+
+// @mixin responsive($breakpoint) {
+//     @if $breakpoint == phone{
+//         @media only screen and (max-width : 600px){
+//             @content;
+//         }
+//     }
+//     @if $breakpoint == tab-port{
+//         @media only screen and (max-width : 900px){
+//             @content;
+//         }
+//     }
+//     @if $breakpoint == tab-land{
+//         @media only screen and (max-width : 1200px){
+//             @content;
+//         }
+//     }
+//     @if $breakpoint == big-desk{
+//         @media only screen and (min-width : 1800px){
+//             @content;
+//         }
+//     }
+// }

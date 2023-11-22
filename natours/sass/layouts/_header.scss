@@ -1,0 +1,69 @@
+/*--------------------------------------------------
+                header
+--------------------------------------------------*/
+.header{
+    height: 95vh;
+    background-image:  -webkit-gradient(linear,left top, right bottom,from(rgba($color-primary,0.8)),to(rgba($color-primary-dark,0.8))),
+    url('../img/hero-small.jpg');
+    background-image:  linear-gradient(to right bottom,rgba($color-primary,0.8),rgba($color-primary-dark,0.8)),
+    url('../img/hero-small.jpg');
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    -webkit-clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
+            clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
+    position: relative;
+
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em),
+    (min-resolution: 192dpi) and (min-width: 48em),
+    (min-width: 125em){
+        background-image:  -webkit-gradient(linear,left top, right bottom,from(rgba($color-primary,0.8)),to(rgba($color-primary-dark,0.8))),
+        url('../img/hero.jpg');
+        background-image:  linear-gradient(to right bottom,rgba($color-primary,0.8),rgba($color-primary-dark,0.8)),
+        url('../img/hero.jpg');
+    }
+ 
+    @include responsive(56.25){
+        -webkit-clip-path: polygon(0 0,100% 0,100% 77vh,0 100%);
+        clip-path: polygon(0 0,100% 0,100% 77vh,0 100%);
+    }
+    @include responsive(48){
+        -webkit-clip-path: polygon(0 0,100% 0,100% 80vh,0 100%);
+        clip-path: polygon(0 0,100% 0,100% 80vh,0 100%) !important;
+    }
+    
+    @include responsive(36){
+        -webkit-clip-path: polygon(0 0,100% 0,100% 85vh,0 100%);
+        clip-path: polygon(0 0,100% 0,100% 85vh,0 100%) !important;
+    }
+    @include responsive(20){
+        -webkit-clip-path: polygon(0 0,100% 0,100% 88vh,0 100%);
+        clip-path: polygon(0 0,100% 0,100% 88vh,0 100%) !important;
+    }
+    /*----------logo-------------*/
+    &__logo-box{
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__logo{
+        height: 4rem;
+    }
+    /*----------heading-------------*/
+    &__heading-box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+        text-align: center;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        
+    }
+
+}
+

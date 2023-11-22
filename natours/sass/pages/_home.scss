@@ -1,0 +1,131 @@
+.section-about{
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -20vh;
+    @include responsive(56.25){
+        padding: 20rem 0;
+    }
+    @include responsive(36){
+        padding: 22rem 0;
+    }
+    @include responsive(30){
+        padding: 24rem 0;
+    }
+    @include responsive(20){
+        padding: 27rem 0;
+    }
+}
+.section-features{
+    background-image:  -webkit-gradient(linear,left top, right bottom,from(rgba($color-primary,0.8)),to(rgba($color-primary-dark,0.8))), 
+    url('../img/nat-4-min.jpg');
+    background-image:  linear-gradient(to right bottom,rgba($color-primary,0.8),rgba($color-primary-dark,0.8)), 
+    url('../img/nat-4-min.jpg');
+
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em),
+    (min-resolution: 192dpi) and (min-width: 48em),
+    (min-width: 125em){
+        background-image:  -webkit-gradient(linear,left top, right bottom,from(rgba($color-primary,0.8)),to(rgba($color-primary-dark,0.8))), 
+        url('../img/nat-4.jpg');
+        background-image:  linear-gradient(to right bottom,rgba($color-primary,0.8),rgba($color-primary-dark,0.8)), 
+        url('../img/nat-4.jpg');
+    }
+    background-size: cover;
+    background-position: center;
+    padding: 20rem 0;
+    transform: skewY(-7deg);
+    -webkit-transform: skewY(-7deg);
+    -moz-transform: skewY(-7deg);
+    -ms-transform: skewY(-7deg);
+    -o-transform: skewY(-7deg);
+    margin-top: -8rem;
+    &>*
+{
+        transform: skewY(7deg);
+        -webkit-transform: skewY(7deg);
+        -moz-transform: skewY(7deg);
+        -ms-transform: skewY(7deg);
+        -o-transform: skewY(7deg);
+    }
+    @include responsive(56.25){
+        padding: 15rem 0;
+    }
+}
+
+.section-tours{
+    background-color: $color-grey-light-1;
+    padding: 25rem 0 10rem 0;
+    margin-top: -20vh;
+    @include responsive(56.25){
+        padding: 24rem 0 7rem 0;
+    }
+    @include responsive(36){
+        padding: 28rem 0 7rem 0;
+    }
+    @include responsive(20){
+        padding: 30rem 0 7rem 0;
+    }
+}
+.section-stories{
+    padding : 10rem 0;
+
+    position: relative;
+  
+}
+.section-book{
+    padding: 15rem 0;
+    background-image: -webkit-gradient(linear, left top, right bottom, from($color-primary),to($color-primary-dark));
+    background-image: linear-gradient(to right bottom, $color-primary,$color-primary-dark);
+    @include responsive(56.25){
+        padding: 10rem 0;
+    }
+
+}
+.book{
+    background-image: linear-gradient(105deg,rgba($color-white,.9) 0%,rgba($color-white,.9) 50%,transparent 50%),
+    url("../img/nat-10-min.jpg");
+
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em),
+    (min-resolution: 192dpi) and (min-width: 48em),
+    (min-width: 125em){
+        background-image: linear-gradient(105deg,rgba($color-white,.9) 0%,rgba($color-white,.9) 50%,transparent 50%),
+        url("../img/nat-10.jpg");
+    }
+    background-size: 100%;
+    border-radius: .3rem;
+
+    box-shadow: 0 1.5rem 4rem rgba($color-black,.5);
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    &__form{
+
+
+        width: 50%;
+        padding: 6rem;
+        @include responsive(64){
+            width: 65%;
+    
+        }
+        @include responsive(56.25){
+            width: 100%;
+    
+        }
+    }
+
+    @include responsive(64){
+        background-size: cover;
+        background-image: linear-gradient(
+            105deg,rgba($color-white,.9) 0%,
+            rgba($color-white,.9) 60%,transparent 60%),url("../img/nat-10.jpg");
+
+    }
+    @include responsive(56.25){
+        
+        background-image: linear-gradient(105deg,rgba($color-white,.9)
+         0%,rgba($color-white,.9) 100%),
+         url("../img/nat-10.jpg");
+
+
+    }
+}

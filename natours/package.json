@@ -1,0 +1,18 @@
+{
+  "name": "natours-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass sass/main.scss css/style.css",
+
+    "concat": "concat -o css/style.concat.css css/icon-styles.css css/style.comp.css"
+  },
+  "author": "htut wai phyoe",
+  "license": "ISC",
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.1"
+  }
+}
